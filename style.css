@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins',
+    sans-serif;
+    background-color: var(--background);
+    
+}
+
+:root{
+    --green: #10b981;
+    --password-background: #273549;
+    --background: #1f2937;
+}
+
+.parent-Container{
+  
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+}
+
+
+
+.text-Container{
+   text-align: left;
+   width: 100%;
+   /* display: flex; */
+
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 50% ;
+    font-weight: 400;
+    font-size: 40px;
+    border: 5px solid var(--green);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+    padding: 10px;
+    filter: invert(52%) sepia(74%) saturate(2320%) hue-rotate(124deg) brightness(97%) contrast(87%);
+    
+
+    animation-name: logoRotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+
+}
+
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+.header{
+    color: white;
+    font-weight: 700;
+    
+}
+
+.text-Highlight{
+
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 10px ;
+}
+
+.subtitle{
+    color: rgb(209, 209, 209);
+    font-weight: 200;
+}
+
+.generate-Button{
+    margin-left: 10px;
+    margin-top: 4rem;
+    padding: .5rem 1.5rem ;
+    background-color: var(--green);
+    color: white;
+    border: 2px solid var(--green);
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.generate-Button:hover{
+    box-shadow: 0 0 8px var(--green) ;
+}
+.generate-Button:active{
+    border: 2px solid white;
+}
+
+.text-Container::after{
+    content: "";
+    width: 90%;
+    min-width: 20em;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background-color: var(--green);
+    margin-top: 8em;
+ 
+
+}
+
+.password-Section{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit,1fr);
+    row-gap: 5rem;
+    
+}
+.password{
+    width: 88%;
+    color: var(--green);
+    padding: .5rem 1.5rem;
+    background-color: var(--password-background);
+    margin: .5rem;
+    border-radius: .25rem;
+    text-align: center;
+}
+
+.password:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--green);
+}
+
+
+@media only screen and (max-width:930px) { 
+    
+
+
+    .parent-Container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        overflow: visible;
+        
+       
+    }
+    .text-Container {
+        text-align: center;
+        width: 100%;
+    }
+ 
+.text-Container::after {
+    content: "";
+    min-width: 100%;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background-color: var(--green);
+    margin-top: 8em;
+
+    
+
+}
+.generate-Button {
+   
+    margin-top: 4rem;
+    padding: .5rem 1.5rem;
+    background-color: var(--green);
+    color: white;
+    border: 2px solid var(--green);
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+    .password-Section {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        
+    
+    }
+    
+    .password {
+        width: 60%;
+        color: var(--green);
+        padding: .5rem 1.5rem;
+        background-color: var(--password-background);
+        margin: .1rem;
+        border-radius: .25rem;
+        text-align: center;
+        justify-self: center;
+        cursor: pointer;
+
+    }
+}
+
+@keyframes logoRotate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+
+    
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Pal</title>
+  </head>
+  <body>
+    <div class="parent-Container">
+      <div class="text-Container">
+        <div class="box">
+          <!-- <h1 class="logo">L.</h1> -->
+          <img
+            class="logo"
+            src="./public/lock-svgrepo-com.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+
+        <h1 class="header">Generate a</h1>
+        <h1 class="text-Highlight">random password</h1>
+        <h3 class="subtitle">Never use an insecure password again.</h3>
+        <button class="generate-Button" onclick="generate()">
+          Generate passwords
+        </button>
+      </div>
+
+      <div class="password-Section">
+        <p class="password" id="password-1">Password 1</p>
+        <p class="password" id="password-2">Password 2</p>
+        <p class="password" id="password-3">Password 3</p>
+        <p class="password" id="password-4">Password 4</p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
